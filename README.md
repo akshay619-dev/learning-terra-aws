@@ -10,7 +10,44 @@ Terraform is an Infrastructure as Code (IaC) tool that allows us to define and p
 
 Before you begin, make sure you have Terraform installed on your local machine. You can download it from the [official Terraform website](https://www.terraform.io/downloads.html).
 
-### Configuration
+### Configure the AWS CLI
+
+Install the AWS CLI version 2 
+
+[https://learn.hashicorp.com/terraform/getting-started/build]
+
+[https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html]
+
+Once that is done, open a new cmd prompt and run
+ ```shell
+    # Configure AWS Credentials in command line
+    $ aws configure
+    AWS Access Key ID [None]: XXXXXXXXX
+    AWS Secret Access Key [None]: XXXXXXXXXXXXXXXXX
+    Default region name [None]: XXXXXXXXXX
+    Default output format [None]: 
+```
+
+```shell
+   # Verfiy aws cli version 
+   $ aws --version
+```
+
+```shell
+     # Verify if we are able list S3 buckets
+    $ aws s3 ls
+```   
+  
+
+Input the user you want to use to build the resources;
+Input the access key for that user;
+The default region you want the resources built in;
+The output format you want.
+
+-----
+Do not use the root user of your account for this action. Use an IAM user that has just enough permissions to do what you need. It is a best practice.
+
+### SETUP
 
 1. Clone this repository to your local machine.
 
